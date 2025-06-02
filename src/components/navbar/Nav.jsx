@@ -1,6 +1,6 @@
 import React from 'react'
 import './nav.css'
-const Nav = () => {
+const Nav = ({setTab}) => {
   return (
     <div className='nav'>
         <div className='nav-left'>
@@ -13,12 +13,13 @@ const Nav = () => {
             <button type='submit'>search</button>
         </div>
         <div className='nav-right'>
-            <ul>
-                <li>Home</li>
+           
+             <ul>
+                <li onClick={() => setTab(0)}>Home</li>
                 <li>About</li>
-                <li>Cart</li>
+                <li onClick={() => setTab(1)}>Cart</li>
                 <li>contact</li>
-            </ul>
+            </ul>   
         </div>
     </div>
   )
